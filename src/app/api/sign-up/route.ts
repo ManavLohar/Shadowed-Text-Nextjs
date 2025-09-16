@@ -12,7 +12,7 @@ export const POST = async (request: Request) => {
     const existingUserVerifiedByUsername = await UserModal.findOne({
       username,
       isVerified: true,
-    });
+    }); 
 
     if (existingUserVerifiedByUsername) {
       return Response.json(
